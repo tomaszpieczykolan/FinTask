@@ -38,7 +38,7 @@ final class Rest {
     ///     - url: request URL
     ///     - successHandler: block that will be called if everything goes right
     ///     - errorHandler: block that will be called if any error occurs
-    func get(fromURL url: URL, successHandler: @escaping (Data) -> Void, errorHandler: @escaping (Swift.Error) -> Void) {
+    func get(from url: URL, successHandler: @escaping (Data) -> Void, errorHandler: @escaping (Swift.Error) -> Void) {
         let request = URLRequest(url: url)
         let task = session.dataTask(with: request, completionHandler: { (data, response, error) in
             do {
