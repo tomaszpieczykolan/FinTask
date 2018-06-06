@@ -16,16 +16,18 @@ final class Rest {
     /// Shared instance of `Rest`
     ///
     /// Uses `URLSession.shared` as it's session
-    static let shared = Rest(session: .shared)
+    static let shared = Rest(session: .shared, decoder: JSONDecoder())
     
     private let session: URLSession
+    private let decoder: JSONDecoder
     
     
     
     // MARK: - Lifecycle
     
-    init(session: URLSession) {
+    init(session: URLSession, decoder: JSONDecoder) {
         self.session = session
+        self.decoder = decoder
     }
     
     
@@ -60,6 +62,23 @@ final class Rest {
             }
         })
         task.resume()
+    }
+    
+    /// Generic GET request that outputs models conforming to `Decodable`
+    ///
+    /// - parameters:
+    ///     - url: request URL
+    ///     - successHandler: block that will be called if everything goes right
+    ///     - errorHandler: block that will be called if any error occurs
+    func get<T: Decodable>(from url: URL, successHandler: @escaping (T) -> Void, errorHandler: @escaping (Swift.Error) -> Void) {
+        get(from: url, successHandler: { data in
+            do {
+                let decodable = try self.decoder.decode(T.self, from: data)
+                successHandler(decodable)
+            } catch {
+                errorHandler(error)
+            }
+        }, errorHandler: errorHandler)
     }
     
     
