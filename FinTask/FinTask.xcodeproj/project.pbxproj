@@ -12,6 +12,9 @@
 		2D1B865520C70031000BE110 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B865420C70031000BE110 /* Endpoint.swift */; };
 		2D1B865820C702AE000BE110 /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B865720C702AE000BE110 /* Rest.swift */; };
 		2D1B866820C85ACC000BE110 /* RestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B866720C85ACC000BE110 /* RestTests.swift */; };
+		2D618B9120C9AD4600E0742A /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D618B9020C9AD4600E0742A /* GitHubUser.swift */; };
+		2D618B9320C9ADB400E0742A /* DailymotionUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D618B9220C9ADB400E0742A /* DailymotionUser.swift */; };
+		2D618B9520C9AE8E00E0742A /* DailymotionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D618B9420C9AE8E00E0742A /* DailymotionResponse.swift */; };
 		2DF45C2820C6F86600E96D26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF45C2720C6F86600E96D26 /* AppDelegate.swift */; };
 		2DF45C2F20C6F86800E96D26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DF45C2E20C6F86800E96D26 /* Assets.xcassets */; };
 		2DF45C3220C6F86800E96D26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF45C3020C6F86800E96D26 /* LaunchScreen.storyboard */; };
@@ -35,6 +38,9 @@
 		2D1B865D20C85AB6000BE110 /* FinTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1B866120C85AB6000BE110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D1B866720C85ACC000BE110 /* RestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTests.swift; sourceTree = "<group>"; };
+		2D618B9020C9AD4600E0742A /* GitHubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUser.swift; sourceTree = "<group>"; };
+		2D618B9220C9ADB400E0742A /* DailymotionUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailymotionUser.swift; sourceTree = "<group>"; };
+		2D618B9420C9AE8E00E0742A /* DailymotionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailymotionResponse.swift; sourceTree = "<group>"; };
 		2DF45C2420C6F86600E96D26 /* FinTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF45C2720C6F86600E96D26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DF45C2E20C6F86800E96D26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 		2D1B865620C70249000BE110 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2D618B8F20C9AD3B00E0742A /* Model */,
 				2D1B865720C702AE000BE110 /* Rest.swift */,
 			);
 			path = Network;
@@ -100,6 +107,16 @@
 				2D1B866120C85AB6000BE110 /* Info.plist */,
 			);
 			path = FinTaskTests;
+			sourceTree = "<group>";
+		};
+		2D618B8F20C9AD3B00E0742A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D618B9420C9AE8E00E0742A /* DailymotionResponse.swift */,
+				2D618B9220C9ADB400E0742A /* DailymotionUser.swift */,
+				2D618B9020C9AD4600E0742A /* GitHubUser.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2DF45C1B20C6F86600E96D26 = {
@@ -244,7 +261,10 @@
 			files = (
 				2DF45C2820C6F86600E96D26 /* AppDelegate.swift in Sources */,
 				2D1B864E20C6FAE2000BE110 /* MainViewController.swift in Sources */,
+				2D618B9320C9ADB400E0742A /* DailymotionUser.swift in Sources */,
 				2D1B865820C702AE000BE110 /* Rest.swift in Sources */,
+				2D618B9520C9AE8E00E0742A /* DailymotionResponse.swift in Sources */,
+				2D618B9120C9AD4600E0742A /* GitHubUser.swift in Sources */,
 				2D1B865520C70031000BE110 /* Endpoint.swift in Sources */,
 				2D1B865220C6FD55000BE110 /* UIColor+DefaultPalette.swift in Sources */,
 			);
