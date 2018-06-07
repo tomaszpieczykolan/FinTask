@@ -14,6 +14,44 @@ class RestTests: XCTestCase {
     
     
     
+    // MARK: - Success tests
+    
+    func testData() {
+        let url = URL(string: "https://www.example.com")!
+        let testData = "Hello World! :)".data(using: .utf8)!
+        let session = MockSession { (request, completionHandler) in
+            let response = HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: nil, headerFields: nil)
+            completionHandler(testData, response, nil)
+        }
+        let rest = Rest(session: session, decoder: JSONDecoder())
+        rest.get(from: url, successHandler: { data in
+            XCTAssertEqual(data, testData, "Data should not be modified by Rest")
+        }, errorHandler: { error in
+            XCTFail("This should not result in error")
+        })
+    }
+    
+    func testGenericGET() {
+        let url = URL(string: "https://www.example.com")!
+        let session = MockSession { (request, completionHandler) in
+            let data = """
+            {
+                "testString": "test value"
+            }
+            """.data(using: .utf8)!
+            let response = HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: nil, headerFields: nil)
+            completionHandler(data, response, nil)
+        }
+        let rest = Rest(session: session, decoder: JSONDecoder())
+        rest.get(from: url, successHandler: { (model: TestModel) in
+            XCTAssertEqual(model.testString, "test value")
+        }, errorHandler: { error in
+            XCTFail("This should not result in error")
+        })
+    }
+    
+    
+    
     // MARK: - Error tests
     
     func testBadResponseError() {
@@ -75,6 +113,25 @@ class RestTests: XCTestCase {
         })
     }
     
+    func testGenericGetBadJSON() {
+        let url = URL(string: "https://www.example.com")!
+        let session = MockSession { (request, completionHandler) in
+            let data = """
+            [
+                testString":: "this JSON is drunk"
+            }
+            """.data(using: .utf8)!
+            let response = HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: nil, headerFields: nil)
+            completionHandler(data, response, nil)
+        }
+        let rest = Rest(session: session, decoder: JSONDecoder())
+        rest.get(from: url, successHandler: { (model: TestModel) in
+            XCTFail("This should not succeed")
+        }, errorHandler: { error in
+            XCTAssert(error is DecodingError)
+        })
+    }
+    
     
     
     // MARK: - Stubs / Utilities
@@ -107,5 +164,9 @@ class RestTests: XCTestCase {
     private enum CustomError: Error {
         case hello
         case world
+    }
+    
+    private struct TestModel: Decodable {
+        let testString: String
     }
 }
