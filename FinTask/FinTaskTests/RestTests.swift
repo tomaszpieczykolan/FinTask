@@ -24,6 +24,7 @@ class RestTests: XCTestCase {
             completionHandler(testData, response, nil)
         }
         let rest = Rest(session: session, decoder: JSONDecoder())
+        
         rest.get(from: url, successHandler: { data in
             XCTAssertEqual(data, testData, "Data should not be modified by Rest")
         }, errorHandler: { error in
@@ -33,18 +34,20 @@ class RestTests: XCTestCase {
     
     func testGenericGET() {
         let url = URL(string: "https://www.example.com")!
+        let expectedValue = "test value"
         let session = MockSession { (request, completionHandler) in
             let data = """
             {
-                "testString": "test value"
+                "testString": "\(expectedValue)"
             }
             """.data(using: .utf8)!
             let response = HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: nil, headerFields: nil)
             completionHandler(data, response, nil)
         }
         let rest = Rest(session: session, decoder: JSONDecoder())
+        
         rest.get(from: url, successHandler: { (model: TestModel) in
-            XCTAssertEqual(model.testString, "test value")
+            XCTAssertEqual(model.testString, expectedValue)
         }, errorHandler: { error in
             XCTFail("This should not result in error")
         })
@@ -56,16 +59,18 @@ class RestTests: XCTestCase {
     
     func testBadResponseError() {
         let url = URL(string: "https://www.example.com")!
+        let expectedStatusCode = 404
         let session = MockSession { (request, completionHandler) in
-            let response = HTTPURLResponse(url: request.url!, statusCode: 404, httpVersion: nil, headerFields: nil)
+            let response = HTTPURLResponse(url: request.url!, statusCode: expectedStatusCode, httpVersion: nil, headerFields: nil)
             completionHandler(nil, response, nil)
         }
         let rest = Rest(session: session, decoder: JSONDecoder())
+        
         rest.get(from: url, successHandler: { data in
             XCTFail("This should not succeed")
         }, errorHandler: { error in
             guard case let Rest.Error.badResponse(statusCode: statusCode) = error else { return XCTFail("Wrong error returned") }
-            XCTAssertEqual(statusCode, 404)
+            XCTAssertEqual(statusCode, expectedStatusCode)
         })
     }
     
@@ -76,6 +81,7 @@ class RestTests: XCTestCase {
             completionHandler(nil, response, nil)
         }
         let rest = Rest(session: session, decoder: JSONDecoder())
+        
         rest.get(from: url, successHandler: { data in
             XCTFail("This should not succeed")
         }, errorHandler: { error in
@@ -90,6 +96,7 @@ class RestTests: XCTestCase {
             completionHandler(nil, response, nil)
         }
         let rest = Rest(session: session, decoder: JSONDecoder())
+        
         rest.get(from: url, successHandler: { data in
             XCTFail("This should not succeed")
         }, errorHandler: { error in
@@ -106,6 +113,7 @@ class RestTests: XCTestCase {
             completionHandler(data, response, error)
         }
         let rest = Rest(session: session, decoder: JSONDecoder())
+        
         rest.get(from: url, successHandler: { data in
             XCTFail("This should not succeed")
         }, errorHandler: { error in
@@ -125,6 +133,7 @@ class RestTests: XCTestCase {
             completionHandler(data, response, nil)
         }
         let rest = Rest(session: session, decoder: JSONDecoder())
+        
         rest.get(from: url, successHandler: { (model: TestModel) in
             XCTFail("This should not succeed")
         }, errorHandler: { error in
