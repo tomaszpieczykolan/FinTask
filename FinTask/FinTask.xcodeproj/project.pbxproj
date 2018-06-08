@@ -17,6 +17,8 @@
 		2D618B9520C9AE8E00E0742A /* DailymotionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D618B9420C9AE8E00E0742A /* DailymotionResponse.swift */; };
 		2D618B9720C9B13C00E0742A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D618B9620C9B13C00E0742A /* API.swift */; };
 		2DA42CA320CAEE4F00017964 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA42CA220CAEE4F00017964 /* User.swift */; };
+		2DA42CAE20CB0B3400017964 /* DailymotionUser+UserCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA42CAD20CB0B3400017964 /* DailymotionUser+UserCreatable.swift */; };
+		2DA42CB020CB0B4F00017964 /* GitHubUser+UserCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA42CAF20CB0B4F00017964 /* GitHubUser+UserCreatable.swift */; };
 		2DF45C2820C6F86600E96D26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF45C2720C6F86600E96D26 /* AppDelegate.swift */; };
 		2DF45C2F20C6F86800E96D26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DF45C2E20C6F86800E96D26 /* Assets.xcassets */; };
 		2DF45C3220C6F86800E96D26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF45C3020C6F86800E96D26 /* LaunchScreen.storyboard */; };
@@ -45,6 +47,8 @@
 		2D618B9420C9AE8E00E0742A /* DailymotionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailymotionResponse.swift; sourceTree = "<group>"; };
 		2D618B9620C9B13C00E0742A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		2DA42CA220CAEE4F00017964 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2DA42CAD20CB0B3400017964 /* DailymotionUser+UserCreatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailymotionUser+UserCreatable.swift"; sourceTree = "<group>"; };
+		2DA42CAF20CB0B4F00017964 /* GitHubUser+UserCreatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitHubUser+UserCreatable.swift"; sourceTree = "<group>"; };
 		2DF45C2420C6F86600E96D26 /* FinTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF45C2720C6F86600E96D26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DF45C2E20C6F86800E96D26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,7 +123,9 @@
 			children = (
 				2D618B9420C9AE8E00E0742A /* DailymotionResponse.swift */,
 				2D618B9220C9ADB400E0742A /* DailymotionUser.swift */,
+				2DA42CAD20CB0B3400017964 /* DailymotionUser+UserCreatable.swift */,
 				2D618B9020C9AD4600E0742A /* GitHubUser.swift */,
+				2DA42CAF20CB0B4F00017964 /* GitHubUser+UserCreatable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,11 +281,13 @@
 			files = (
 				2DF45C2820C6F86600E96D26 /* AppDelegate.swift in Sources */,
 				2D1B864E20C6FAE2000BE110 /* MainViewController.swift in Sources */,
+				2DA42CAE20CB0B3400017964 /* DailymotionUser+UserCreatable.swift in Sources */,
 				2D618B9320C9ADB400E0742A /* DailymotionUser.swift in Sources */,
 				2D1B865820C702AE000BE110 /* Rest.swift in Sources */,
 				2D618B9520C9AE8E00E0742A /* DailymotionResponse.swift in Sources */,
 				2D618B9120C9AD4600E0742A /* GitHubUser.swift in Sources */,
 				2D1B865520C70031000BE110 /* Endpoint.swift in Sources */,
+				2DA42CB020CB0B4F00017964 /* GitHubUser+UserCreatable.swift in Sources */,
 				2D618B9720C9B13C00E0742A /* API.swift in Sources */,
 				2DA42CA320CAEE4F00017964 /* User.swift in Sources */,
 				2D1B865220C6FD55000BE110 /* UIColor+DefaultPalette.swift in Sources */,
