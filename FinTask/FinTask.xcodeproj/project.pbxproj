@@ -20,6 +20,7 @@
 		2DA42CAE20CB0B3400017964 /* DailymotionUser+UserCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA42CAD20CB0B3400017964 /* DailymotionUser+UserCreatable.swift */; };
 		2DA42CB020CB0B4F00017964 /* GitHubUser+UserCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA42CAF20CB0B4F00017964 /* GitHubUser+UserCreatable.swift */; };
 		2DA42CB320CB0BFE00017964 /* User+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA42CB220CB0BFE00017964 /* User+Store.swift */; };
+		2DA42CB520CB101700017964 /* User+StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA42CB420CB101700017964 /* User+StoreTests.swift */; };
 		2DF45C2820C6F86600E96D26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF45C2720C6F86600E96D26 /* AppDelegate.swift */; };
 		2DF45C2F20C6F86800E96D26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DF45C2E20C6F86800E96D26 /* Assets.xcassets */; };
 		2DF45C3220C6F86800E96D26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF45C3020C6F86800E96D26 /* LaunchScreen.storyboard */; };
@@ -51,6 +52,7 @@
 		2DA42CAD20CB0B3400017964 /* DailymotionUser+UserCreatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailymotionUser+UserCreatable.swift"; sourceTree = "<group>"; };
 		2DA42CAF20CB0B4F00017964 /* GitHubUser+UserCreatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitHubUser+UserCreatable.swift"; sourceTree = "<group>"; };
 		2DA42CB220CB0BFE00017964 /* User+Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Store.swift"; sourceTree = "<group>"; };
+		2DA42CB420CB101700017964 /* User+StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+StoreTests.swift"; sourceTree = "<group>"; };
 		2DF45C2420C6F86600E96D26 /* FinTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF45C2720C6F86600E96D26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DF45C2E20C6F86800E96D26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				2D1B866720C85ACC000BE110 /* RestTests.swift */,
+				2DA42CB420CB101700017964 /* User+StoreTests.swift */,
 				2D1B866120C85AB6000BE110 /* Info.plist */,
 			);
 			path = FinTaskTests;
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DA42CB520CB101700017964 /* User+StoreTests.swift in Sources */,
 				2D1B866820C85ACC000BE110 /* RestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
