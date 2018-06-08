@@ -9,14 +9,40 @@
 /* Begin PBXBuildFile section */
 		2D1B864E20C6FAE2000BE110 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B864D20C6FAE2000BE110 /* MainViewController.swift */; };
 		2D1B865220C6FD55000BE110 /* UIColor+DefaultPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B865120C6FD55000BE110 /* UIColor+DefaultPalette.swift */; };
+		2D1B865520C70031000BE110 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B865420C70031000BE110 /* Endpoint.swift */; };
+		2D1B865820C702AE000BE110 /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B865720C702AE000BE110 /* Rest.swift */; };
+		2D1B866820C85ACC000BE110 /* RestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B866720C85ACC000BE110 /* RestTests.swift */; };
+		2D618B9120C9AD4600E0742A /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D618B9020C9AD4600E0742A /* GitHubUser.swift */; };
+		2D618B9320C9ADB400E0742A /* DailymotionUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D618B9220C9ADB400E0742A /* DailymotionUser.swift */; };
+		2D618B9520C9AE8E00E0742A /* DailymotionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D618B9420C9AE8E00E0742A /* DailymotionResponse.swift */; };
+		2D618B9720C9B13C00E0742A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D618B9620C9B13C00E0742A /* API.swift */; };
 		2DF45C2820C6F86600E96D26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF45C2720C6F86600E96D26 /* AppDelegate.swift */; };
 		2DF45C2F20C6F86800E96D26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DF45C2E20C6F86800E96D26 /* Assets.xcassets */; };
 		2DF45C3220C6F86800E96D26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF45C3020C6F86800E96D26 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2D1B866220C85AB6000BE110 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DF45C1C20C6F86600E96D26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DF45C2320C6F86600E96D26;
+			remoteInfo = FinTask;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2D1B864D20C6FAE2000BE110 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2D1B865120C6FD55000BE110 /* UIColor+DefaultPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+DefaultPalette.swift"; sourceTree = "<group>"; };
+		2D1B865420C70031000BE110 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		2D1B865720C702AE000BE110 /* Rest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rest.swift; sourceTree = "<group>"; };
+		2D1B865D20C85AB6000BE110 /* FinTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D1B866120C85AB6000BE110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D1B866720C85ACC000BE110 /* RestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTests.swift; sourceTree = "<group>"; };
+		2D618B9020C9AD4600E0742A /* GitHubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUser.swift; sourceTree = "<group>"; };
+		2D618B9220C9ADB400E0742A /* DailymotionUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailymotionUser.swift; sourceTree = "<group>"; };
+		2D618B9420C9AE8E00E0742A /* DailymotionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailymotionResponse.swift; sourceTree = "<group>"; };
+		2D618B9620C9B13C00E0742A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		2DF45C2420C6F86600E96D26 /* FinTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF45C2720C6F86600E96D26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DF45C2E20C6F86800E96D26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -25,6 +51,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2D1B865A20C85AB6000BE110 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2DF45C2120C6F86600E96D26 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,14 +88,45 @@
 			isa = PBXGroup;
 			children = (
 				2D1B865120C6FD55000BE110 /* UIColor+DefaultPalette.swift */,
+				2D1B865420C70031000BE110 /* Endpoint.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		2D1B865620C70249000BE110 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2D618B8F20C9AD3B00E0742A /* Model */,
+				2D1B865720C702AE000BE110 /* Rest.swift */,
+				2D618B9620C9B13C00E0742A /* API.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2D1B865E20C85AB6000BE110 /* FinTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				2D1B866720C85ACC000BE110 /* RestTests.swift */,
+				2D1B866120C85AB6000BE110 /* Info.plist */,
+			);
+			path = FinTaskTests;
+			sourceTree = "<group>";
+		};
+		2D618B8F20C9AD3B00E0742A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D618B9420C9AE8E00E0742A /* DailymotionResponse.swift */,
+				2D618B9220C9ADB400E0742A /* DailymotionUser.swift */,
+				2D618B9020C9AD4600E0742A /* GitHubUser.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2DF45C1B20C6F86600E96D26 = {
 			isa = PBXGroup;
 			children = (
 				2DF45C2620C6F86600E96D26 /* FinTask */,
+				2D1B865E20C85AB6000BE110 /* FinTaskTests */,
 				2DF45C2520C6F86600E96D26 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				2DF45C2420C6F86600E96D26 /* FinTask.app */,
+				2D1B865D20C85AB6000BE110 /* FinTaskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,6 +145,7 @@
 			children = (
 				2DF45C2720C6F86600E96D26 /* AppDelegate.swift */,
 				2D1B864C20C6FACA000BE110 /* UI */,
+				2D1B865620C70249000BE110 /* Network */,
 				2D1B865020C6FCC4000BE110 /* Config */,
 				2DF45C2E20C6F86800E96D26 /* Assets.xcassets */,
 				2DF45C3020C6F86800E96D26 /* LaunchScreen.storyboard */,
@@ -91,6 +157,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2D1B865C20C85AB6000BE110 /* FinTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D1B866420C85AB6000BE110 /* Build configuration list for PBXNativeTarget "FinTaskTests" */;
+			buildPhases = (
+				2D1B865920C85AB6000BE110 /* Sources */,
+				2D1B865A20C85AB6000BE110 /* Frameworks */,
+				2D1B865B20C85AB6000BE110 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D1B866320C85AB6000BE110 /* PBXTargetDependency */,
+			);
+			name = FinTaskTests;
+			productName = FinTaskTests;
+			productReference = 2D1B865D20C85AB6000BE110 /* FinTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2DF45C2320C6F86600E96D26 /* FinTask */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DF45C3620C6F86800E96D26 /* Build configuration list for PBXNativeTarget "FinTask" */;
@@ -118,6 +202,10 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Tomasz Pieczykolan";
 				TargetAttributes = {
+					2D1B865C20C85AB6000BE110 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 2DF45C2320C6F86600E96D26;
+					};
 					2DF45C2320C6F86600E96D26 = {
 						CreatedOnToolsVersion = 9.4;
 					};
@@ -137,11 +225,19 @@
 			projectRoot = "";
 			targets = (
 				2DF45C2320C6F86600E96D26 /* FinTask */,
+				2D1B865C20C85AB6000BE110 /* FinTaskTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2D1B865B20C85AB6000BE110 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2DF45C2220C6F86600E96D26 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -154,17 +250,39 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2D1B865920C85AB6000BE110 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D1B866820C85ACC000BE110 /* RestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2DF45C2020C6F86600E96D26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2DF45C2820C6F86600E96D26 /* AppDelegate.swift in Sources */,
 				2D1B864E20C6FAE2000BE110 /* MainViewController.swift in Sources */,
+				2D618B9320C9ADB400E0742A /* DailymotionUser.swift in Sources */,
+				2D1B865820C702AE000BE110 /* Rest.swift in Sources */,
+				2D618B9520C9AE8E00E0742A /* DailymotionResponse.swift in Sources */,
+				2D618B9120C9AD4600E0742A /* GitHubUser.swift in Sources */,
+				2D1B865520C70031000BE110 /* Endpoint.swift in Sources */,
+				2D618B9720C9B13C00E0742A /* API.swift in Sources */,
 				2D1B865220C6FD55000BE110 /* UIColor+DefaultPalette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D1B866320C85AB6000BE110 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DF45C2320C6F86600E96D26 /* FinTask */;
+			targetProxy = 2D1B866220C85AB6000BE110 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2DF45C3020C6F86800E96D26 /* LaunchScreen.storyboard */ = {
@@ -178,6 +296,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2D1B866520C85AB6000BE110 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 87M528HN2U;
+				INFOPLIST_FILE = FinTaskTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tomaszpieczykolan.development.FinTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinTask.app/FinTask";
+			};
+			name = Debug;
+		};
+		2D1B866620C85AB6000BE110 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 87M528HN2U;
+				INFOPLIST_FILE = FinTaskTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tomaszpieczykolan.development.FinTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinTask.app/FinTask";
+			};
+			name = Release;
+		};
 		2DF45C3420C6F86800E96D26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -331,6 +491,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2D1B866420C85AB6000BE110 /* Build configuration list for PBXNativeTarget "FinTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D1B866520C85AB6000BE110 /* Debug */,
+				2D1B866620C85AB6000BE110 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2DF45C1F20C6F86600E96D26 /* Build configuration list for PBXProject "FinTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
