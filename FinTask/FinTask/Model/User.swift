@@ -9,8 +9,14 @@
 import struct Foundation.URL
 
 struct User {
+    
+    /// Name (aka username or nickname) of the user
     let name: String
+    
+    /// URL to avatar resource. Download it on your own.
     let avatarURL: URL
+    
+    /// Name of the API that the user was fetched from.
     let source: String
 }
 
