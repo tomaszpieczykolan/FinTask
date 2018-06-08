@@ -11,13 +11,13 @@ import struct Foundation.URL
 /// Abstracts requests to external APIs
 class API {
     
-    /// HTTP client
-    private let rest: Rest
-    
     /// Shared instance of `API`
     ///
     /// Uses `Rest.shared` as it's HTTP client
     static let shared = API(rest: .shared)
+    
+    /// HTTP client
+    private let rest: Rest
     
     
     
