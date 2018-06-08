@@ -13,3 +13,7 @@ struct User {
     let avatarURL: URL
     let source: String
 }
+
+protocol UserCreatable {
+    func toUser() -> User?
+}
