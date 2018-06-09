@@ -66,9 +66,11 @@ class MainViewController: UIViewController {
             guard let strongSelf = self else { return }
             strongSelf.users.append(contentsOf: newUsers)
         }, errorHandler: { [weak self] error in
-            let alertController = UIAlertController(title: "Error", message: "Could not fetch users", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            self?.present(alertController, animated: true, completion: nil)
+            DispatchQueue.main.async {
+                let alertController = UIAlertController(title: "Error", message: "Could not fetch users", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self?.present(alertController, animated: true, completion: nil)
+            }
         })
     }
 }
