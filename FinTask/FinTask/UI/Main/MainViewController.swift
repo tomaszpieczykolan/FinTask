@@ -14,14 +14,45 @@ class MainViewController: UIViewController {
     
     
     
+    // MARK: - Subviews
+    
+    lazy var statusBarBlurView: UIVisualEffectView = {
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let visualEffectView = UIVisualEffectView(effect: blurEffect)
+        visualEffectView.translatesAutoresizingMaskIntoConstraints = false
+        return visualEffectView
+    }()
+    
+    
+    
     // MARK: - View lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupViewHierarchy()
+        setupConstraints()
+        
         view.backgroundColor = .defaultBackground
         
         reloadUsers()
+    }
+    
+    
+    
+    // MARK: - Setup
+    
+    private func setupViewHierarchy() {
+        view.addSubview(statusBarBlurView)
+    }
+    
+    private func setupConstraints() {
+        view.addConstraints([
+            NSLayoutConstraint(item: view, attribute: .top, relatedBy: .equal, toItem: statusBarBlurView, attribute: .top, multiplier: 1.0, constant: 0.0),
+            topLayoutGuide.bottomAnchor.constraint(equalTo: statusBarBlurView.bottomAnchor),
+            NSLayoutConstraint(item: view, attribute: .leading, relatedBy: .equal, toItem: statusBarBlurView, attribute: .leading, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: view, attribute: .trailing, relatedBy: .equal, toItem: statusBarBlurView, attribute: .trailing, multiplier: 1.0, constant: 0.0)
+        ])
     }
     
     
