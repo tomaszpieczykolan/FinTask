@@ -1,0 +1,15 @@
+platform :ios, '10.0'
+
+def pods
+  pod 'SDWebImage', '4.4.1'
+end
+
+target 'FinTask' do
+  use_frameworks!
+  pods
+end
+
+target 'FinTaskTests' do
+  use_frameworks!
+  pods
+end
