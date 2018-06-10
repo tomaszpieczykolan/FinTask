@@ -110,11 +110,22 @@ class MainViewController: UIViewController {
             }
         })
     }
+    
+    
+    
+    // MARK: - Actions
+    
+    func userSelected(_ user: User) {
+        let detailVC = DetailViewController(with: user)
+        present(detailVC, animated: true, completion: nil)
+    }
 }
 
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.selectRow(at: nil, animated: false, scrollPosition: .none)
+        let user = users[indexPath.row]
+        userSelected(user)
     }
 }
 
