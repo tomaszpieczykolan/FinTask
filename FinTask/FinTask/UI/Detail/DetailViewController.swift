@@ -12,6 +12,8 @@ class DetailViewController: UIViewController {
     
     
     
+    private var user: User?
+    
     // MARK: - Subviews
     
     private lazy var toolbar: UIToolbar = {
@@ -23,6 +25,16 @@ class DetailViewController: UIViewController {
         toolbar.items = [closeItem]
         return toolbar
     }()
+    
+    
+    
+    // MARK: - Lifecycle
+    
+    convenience init(with user: User) {
+        self.init()
+        
+        self.user = user
+    }
     
     
     
