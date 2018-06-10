@@ -30,7 +30,7 @@ class MainViewController: UIViewController {
     }()
     
     lazy var statusBarBlurView: UIVisualEffectView = {
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffect = UIBlurEffect(style: .dark)
         let visualEffectView = UIVisualEffectView(effect: blurEffect)
         visualEffectView.translatesAutoresizingMaskIntoConstraints = false
         return visualEffectView
@@ -93,14 +93,7 @@ class MainViewController: UIViewController {
         
         User.fetchAll(newUsersHandler: { [weak self] newUsers in
             DispatchQueue.main.async {
-                guard let strongSelf = self else { return }
-                let previousCount = strongSelf.users.count
-                strongSelf.users.append(contentsOf: newUsers)
-                var rows = [IndexPath]()
-                for i in newUsers.indices {
-                    rows.append(IndexPath(row: i + previousCount, section: 0))
-                }
-                strongSelf.tableView.insertRows(at: rows, with: .automatic)
+                self?.addUsersToTableView(newUsers, animated: true)
             }
         }, errorHandler: { [weak self] error in
             DispatchQueue.main.async {
@@ -109,6 +102,21 @@ class MainViewController: UIViewController {
                 self?.present(alertController, animated: true, completion: nil)
             }
         })
+    }
+    
+    /// Adds users at the end of the table view
+    func addUsersToTableView(_ newUsers: [User], animated: Bool) {
+        let previousCount = users.count
+        users.append(contentsOf: newUsers)
+        if animated {
+            var rows = [IndexPath]()
+            for i in newUsers.indices {
+                rows.append(IndexPath(row: i + previousCount, section: 0))
+            }
+            tableView.insertRows(at: rows, with: .automatic)
+        } else {
+            tableView.reloadData()
+        }
     }
     
     

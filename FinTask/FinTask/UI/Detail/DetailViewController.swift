@@ -48,7 +48,7 @@ class DetailViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.font = .preferredFont(forTextStyle: UIFontTextStyle.caption1)
+        label.font = .preferredFont(forTextStyle: .caption1)
         label.textColor = .defaultSecondaryText
         return label
     }()
