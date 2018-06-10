@@ -12,6 +12,7 @@
 		2D1B865520C70031000BE110 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B865420C70031000BE110 /* Endpoint.swift */; };
 		2D1B865820C702AE000BE110 /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B865720C702AE000BE110 /* Rest.swift */; };
 		2D1B866820C85ACC000BE110 /* RestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B866720C85ACC000BE110 /* RestTests.swift */; };
+		2D4CED8920CD485B0033B604 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4CED8820CD485B0033B604 /* DetailViewController.swift */; };
 		2D618B9120C9AD4600E0742A /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D618B9020C9AD4600E0742A /* GitHubUser.swift */; };
 		2D618B9320C9ADB400E0742A /* DailymotionUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D618B9220C9ADB400E0742A /* DailymotionUser.swift */; };
 		2D618B9520C9AE8E00E0742A /* DailymotionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D618B9420C9AE8E00E0742A /* DailymotionResponse.swift */; };
@@ -48,6 +49,7 @@
 		2D1B865D20C85AB6000BE110 /* FinTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1B866120C85AB6000BE110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D1B866720C85ACC000BE110 /* RestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTests.swift; sourceTree = "<group>"; };
+		2D4CED8820CD485B0033B604 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2D618B9020C9AD4600E0742A /* GitHubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUser.swift; sourceTree = "<group>"; };
 		2D618B9220C9ADB400E0742A /* DailymotionUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailymotionUser.swift; sourceTree = "<group>"; };
 		2D618B9420C9AE8E00E0742A /* DailymotionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailymotionResponse.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				2D1B864F20C6FB55000BE110 /* Main */,
+				2D4CED8720CD483E0033B604 /* Detail */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -134,6 +137,14 @@
 				2D1B866120C85AB6000BE110 /* Info.plist */,
 			);
 			path = FinTaskTests;
+			sourceTree = "<group>";
+		};
+		2D4CED8720CD483E0033B604 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				2D4CED8820CD485B0033B604 /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		2D618B8F20C9AD3B00E0742A /* Model */ = {
@@ -428,6 +439,7 @@
 				2DA42CB020CB0B4F00017964 /* GitHubUser+UserCreatable.swift in Sources */,
 				2D618B9720C9B13C00E0742A /* API.swift in Sources */,
 				2DA42CA320CAEE4F00017964 /* User.swift in Sources */,
+				2D4CED8920CD485B0033B604 /* DetailViewController.swift in Sources */,
 				2D1B865220C6FD55000BE110 /* UIColor+DefaultPalette.swift in Sources */,
 				2DA42CB320CB0BFE00017964 /* User+Store.swift in Sources */,
 			);
