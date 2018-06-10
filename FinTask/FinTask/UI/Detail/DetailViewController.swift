@@ -31,6 +31,7 @@ class DetailViewController: UIViewController {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         return imageView
     }()
     
@@ -40,6 +41,15 @@ class DetailViewController: UIViewController {
         label.textAlignment = .center
         label.font = .preferredFont(forTextStyle: .title3)
         label.textColor = .defaultText
+        return label
+    }()
+    
+    private lazy var sourceLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.font = .preferredFont(forTextStyle: UIFontTextStyle.caption1)
+        label.textColor = .defaultSecondaryText
         return label
     }()
     
@@ -78,6 +88,7 @@ class DetailViewController: UIViewController {
         view.addSubview(toolbar)
         view.addSubview(avatarImageView)
         view.addSubview(nameLabel)
+        view.addSubview(sourceLabel)
     }
     
     private func setupConstraints() {
@@ -92,17 +103,27 @@ class DetailViewController: UIViewController {
             
             NSLayoutConstraint(item: avatarImageView, attribute: .bottom, relatedBy: .equal, toItem: nameLabel, attribute: .top, multiplier: 1.0, constant: -8.0),
             NSLayoutConstraint(item: view, attribute: .leadingMargin, relatedBy: .equal, toItem: nameLabel, attribute: .leading, multiplier: 1.0, constant: 0.0),
-            NSLayoutConstraint(item: view, attribute: .trailingMargin, relatedBy: .equal, toItem: nameLabel, attribute: .trailing, multiplier: 1.0, constant: 0.0)
+            NSLayoutConstraint(item: view, attribute: .trailingMargin, relatedBy: .equal, toItem: nameLabel, attribute: .trailing, multiplier: 1.0, constant: 0.0),
+            
+            NSLayoutConstraint(item: nameLabel, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: sourceLabel, attribute: .top, multiplier: 1.0, constant: -8.0),
+            NSLayoutConstraint(item: view, attribute: .leadingMargin, relatedBy: .equal, toItem: sourceLabel, attribute: .leading, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: view, attribute: .trailingMargin, relatedBy: .equal, toItem: sourceLabel, attribute: .trailing, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: view, attribute: .bottomMargin, relatedBy: .equal, toItem: sourceLabel, attribute: .bottom, multiplier: 1.0, constant: 8.0)
         ])
         
         let avatarARConstraint = NSLayoutConstraint(item: avatarImageView, attribute: .width, relatedBy: .equal, toItem: avatarImageView, attribute: .height, multiplier: 1.0, constant: 0.0)
         avatarARConstraint.priority = .defaultHigh
         avatarImageView.addConstraint(avatarARConstraint)
+        
+        toolbar.setContentCompressionResistancePriority(.required, for: .vertical)
+        nameLabel.setContentCompressionResistancePriority(.required, for: .vertical)
+        sourceLabel.setContentCompressionResistancePriority(.required, for: .vertical)
     }
     
     func setup(with model: User) {
         avatarImageView.sd_setImage(with: model.avatarURL)
         nameLabel.text = model.name
+        sourceLabel.text = model.source
     }
     
     
