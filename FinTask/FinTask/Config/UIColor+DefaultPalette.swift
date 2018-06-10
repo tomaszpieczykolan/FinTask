@@ -10,4 +10,6 @@ import UIKit.UIColor
 
 extension UIColor {
     static let defaultBackground = UIColor(white: 0.15, alpha: 1.0)
+    static let defaultText = UIColor.white
+    static let defaultSecondaryText = UIColor(white: 1.0, alpha: 0.75)
 }

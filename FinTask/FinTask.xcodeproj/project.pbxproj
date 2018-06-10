@@ -24,6 +24,7 @@
 		2DF45C2820C6F86600E96D26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF45C2720C6F86600E96D26 /* AppDelegate.swift */; };
 		2DF45C2F20C6F86800E96D26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DF45C2E20C6F86800E96D26 /* Assets.xcassets */; };
 		2DF45C3220C6F86800E96D26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF45C3020C6F86800E96D26 /* LaunchScreen.storyboard */; };
+		2DFFF3A420CC731E00756827 /* MainViewUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFFF3A320CC731E00756827 /* MainViewUserCell.swift */; };
 		4BC6BE9C22FA6CC8FC074270 /* Pods_FinTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A1667484DD3DC704079621 /* Pods_FinTaskTests.framework */; };
 		5E9E5B45138EE2B19EDC4763 /* Pods_FinTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCE0BF3798621E5FAD0A8F3 /* Pods_FinTask.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		2DF45C2E20C6F86800E96D26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DF45C3120C6F86800E96D26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DF45C3320C6F86800E96D26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DFFF3A320CC731E00756827 /* MainViewUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewUserCell.swift; sourceTree = "<group>"; };
 		300A4E9DEC5645CFE96F5ECB /* Pods-FinTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinTaskTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinTaskTests/Pods-FinTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		50A1667484DD3DC704079621 /* Pods_FinTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DCE0BF3798621E5FAD0A8F3 /* Pods_FinTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				2D1B864D20C6FAE2000BE110 /* MainViewController.swift */,
+				2DFFF3A220CC730400756827 /* Cells */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -195,6 +198,14 @@
 				2DF45C3320C6F86800E96D26 /* Info.plist */,
 			);
 			path = FinTask;
+			sourceTree = "<group>";
+		};
+		2DFFF3A220CC730400756827 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2DFFF3A320CC731E00756827 /* MainViewUserCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		6066E47E13E25E3A06B62E7B /* Frameworks */ = {
@@ -411,6 +422,7 @@
 				2D618B9320C9ADB400E0742A /* DailymotionUser.swift in Sources */,
 				2D1B865820C702AE000BE110 /* Rest.swift in Sources */,
 				2D618B9520C9AE8E00E0742A /* DailymotionResponse.swift in Sources */,
+				2DFFF3A420CC731E00756827 /* MainViewUserCell.swift in Sources */,
 				2D618B9120C9AD4600E0742A /* GitHubUser.swift in Sources */,
 				2D1B865520C70031000BE110 /* Endpoint.swift in Sources */,
 				2DA42CB020CB0B4F00017964 /* GitHubUser+UserCreatable.swift in Sources */,
