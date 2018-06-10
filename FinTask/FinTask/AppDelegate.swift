@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = MainViewController()
+        window?.tintColor = .defaultTint
         window?.makeKeyAndVisible()
         
         return true
