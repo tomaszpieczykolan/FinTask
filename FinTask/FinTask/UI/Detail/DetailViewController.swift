@@ -34,6 +34,15 @@ class DetailViewController: UIViewController {
         return imageView
     }()
     
+    private lazy var nameLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.font = .preferredFont(forTextStyle: .title3)
+        label.textColor = .defaultText
+        return label
+    }()
+    
     
     
     // MARK: - Lifecycle
@@ -68,6 +77,7 @@ class DetailViewController: UIViewController {
     private func setupViewHierarchy() {
         view.addSubview(toolbar)
         view.addSubview(avatarImageView)
+        view.addSubview(nameLabel)
     }
     
     private func setupConstraints() {
@@ -78,7 +88,11 @@ class DetailViewController: UIViewController {
             
             NSLayoutConstraint(item: toolbar, attribute: .bottom, relatedBy: .equal, toItem: avatarImageView, attribute: .top, multiplier: 1.0, constant: 0.0),
             NSLayoutConstraint(item: view, attribute: .leading, relatedBy: .equal, toItem: avatarImageView, attribute: .leading, multiplier: 1.0, constant: 0.0),
-            NSLayoutConstraint(item: view, attribute: .trailing, relatedBy: .equal, toItem: avatarImageView, attribute: .trailing, multiplier: 1.0, constant: 0.0)
+            NSLayoutConstraint(item: view, attribute: .trailing, relatedBy: .equal, toItem: avatarImageView, attribute: .trailing, multiplier: 1.0, constant: 0.0),
+            
+            NSLayoutConstraint(item: avatarImageView, attribute: .bottom, relatedBy: .equal, toItem: nameLabel, attribute: .top, multiplier: 1.0, constant: -8.0),
+            NSLayoutConstraint(item: view, attribute: .leadingMargin, relatedBy: .equal, toItem: nameLabel, attribute: .leading, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: view, attribute: .trailingMargin, relatedBy: .equal, toItem: nameLabel, attribute: .trailing, multiplier: 1.0, constant: 0.0)
         ])
         
         let avatarARConstraint = NSLayoutConstraint(item: avatarImageView, attribute: .width, relatedBy: .equal, toItem: avatarImageView, attribute: .height, multiplier: 1.0, constant: 0.0)
@@ -88,6 +102,7 @@ class DetailViewController: UIViewController {
     
     func setup(with model: User) {
         avatarImageView.sd_setImage(with: model.avatarURL)
+        nameLabel.text = model.name
     }
     
     
